@@ -1,6 +1,8 @@
 import os
 import asyncio
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel
 from motor.motor_asyncio import AsyncIOMotorClient
 from dotenv import load_dotenv
@@ -11,7 +13,8 @@ from telegram.ext import Application, MessageHandler, filters, ContextTypes
 
 load_dotenv()
 
-app = FastAPI()
+# ¡Aquí importamos TU código de IA!
+from services.nlp import clasificar_reporte
 
 # --- CONEXIÓN A TU BASE DE DATOS LOCAL ---
 client = AsyncIOMotorClient(os.getenv("MONGO_URI"))
