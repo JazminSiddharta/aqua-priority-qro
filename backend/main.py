@@ -49,6 +49,7 @@ async def rutas():
         }
     ]
 @app.post("/telegram")
+@app.post("/webhook/telegram")
 async def telegram():
 
     return {
