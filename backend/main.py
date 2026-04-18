@@ -48,3 +48,9 @@ async def rutas():
             ]
         }
     ]
+@app.post("/telegram")
+async def telegram():
+
+    return {
+        "mensaje":"Reporte recibido desde Telegram"
+    }
