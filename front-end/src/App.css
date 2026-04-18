@@ -11,6 +11,7 @@
   &:hover {
     border-color: var(--accent-border);
   }
+
   &:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
@@ -42,8 +43,7 @@
     z-index: 1;
     top: 34px;
     height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4);
   }
 
   .vite {
@@ -51,8 +51,7 @@
     top: 107px;
     height: 26px;
     width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
   }
 }
 
@@ -75,9 +74,10 @@
   border-top: 1px solid var(--border);
   text-align: left;
 
-  & > div {
+  &>div {
     flex: 1 1 0;
     padding: 32px;
+
     @media (max-width: 1024px) {
       padding: 24px 20px;
     }
@@ -130,6 +130,7 @@
     &:hover {
       box-shadow: var(--shadow);
     }
+
     .button-icon {
       height: 18px;
       width: 18px;
@@ -156,6 +157,7 @@
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
+
   @media (max-width: 1024px) {
     height: 48px;
   }
@@ -177,8 +179,167 @@
     left: 0;
     border-left-color: var(--border);
   }
+
   &::after {
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+/* src/App.css */
+:root {
+  --azul-marino: #003366;
+  --azul-claro: #007bff;
+  --blanco: #ffffff;
+  --fondo: #f0f2f5;
+  --texto: #333333;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--fondo);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Sección del Mapa (70%) */
+.map-section {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.zona-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  border: 1px solid #ddd;
+}
+
+/* Sección del Panel (30%) */
+.panel-section {
+  width: 30%;
+  height: 100%;
+  background: var(--blanco);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  background: var(--azul-marino);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+/* Pestañas / Tabs */
+.tabs-container {
+  display: flex;
+  background: #e9ecef;
+  padding: 5px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6c757d;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.tab-btn.active {
+  background: var(--blanco);
+  color: var(--azul-claro);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido de Tablas */
+.tab-content {
+  padding: 15px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th {
+  text-align: left;
+  padding: 12px 8px;
+  color: #666;
+  border-bottom: 2px solid var(--fondo);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.custom-table tr {
+  border-bottom: 1px solid #f1f1f1;
+  transition: 0.2s;
+}
+
+.custom-table tr:hover {
+  background: #f8fbff;
+}
+
+.custom-table td {
+  padding: 12px 8px;
+  font-size: 14px;
+}
+
+/* Badges de Prioridad (Punto 4) */
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.badge-alta {
+  background: #ffe3e3;
+  color: #d90429;
+}
+
+.badge-media {
+  background: #fff4e5;
+  color: #ff9200;
+}
+
+.badge-baja {
+  background: #e3f2fd;
+  color: #007bff;
+}
+
+/* Resaltado de Medidores (Punto 7) */
+.row-falla {
+  background-color: #fffafa !important;
+}
+
+.status-label {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #eee;
+  border-radius: 4px;
+  font-size: 12px;
 }
