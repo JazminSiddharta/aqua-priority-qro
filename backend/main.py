@@ -25,3 +25,11 @@ async def startup():
 @app.get("/health")
 async def health():
     return {"status": "ok", "message": "Backend Aqua-Priority funcionando"}
+
+# 2. Importar los routers
+from routes import reportes
+from routes import telegram
+
+# 3. Conectar los módulos a la aplicación principal
+app.include_router(reportes.router)
+app.include_router(telegram.router, prefix="/telegram", tags=["Telegram"])

@@ -30,7 +30,7 @@ def test_flujo_telegram():
 
     try:
         # Nota: El backend tiene que crear esta ruta específica para escuchar a Telegram
-        res = requests.post(f"{BASE_URL}/healthy", json=payload_telegram)
+        res = requests.post(f"{BASE_URL}/telegram/webhook", json=payload_telegram)
         
         print(f"Status Code: {res.status_code}")
         if res.status_code == 200:
