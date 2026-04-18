@@ -1,4 +1,8 @@
+from fastapi import FastAPI
 from pydantic import BaseModel
+
+app = FastAPI(title="Aqua Priority API")
+
 
 class Reporte(BaseModel):
     tipo: str
@@ -7,7 +11,10 @@ class Reporte(BaseModel):
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "message": "Backend Aqua-Priority funcionando"}
+    return {
+        "status":"ok",
+        "message":"Backend Aqua-Priority funcionando"
+    }
 
 
 @app.post("/reportes")
