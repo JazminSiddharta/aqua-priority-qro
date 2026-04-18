@@ -36,3 +36,15 @@ async def mapa():
             "prioridad":"media"
         }
     ]
+@app.get("/rutas")
+async def rutas():
+
+    return [
+        {
+            "zona":"centro",
+            "ruta":[
+                [20.5888,-100.3899],
+                [20.5930,-100.3920]
+            ]
+        }
+    ]
