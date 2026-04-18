@@ -21,3 +21,18 @@ async def crear_reporte(data: Reporte):
         "zona": data.zona_tipo,
         "prioridad": prioridad
     }
+@app.get("/reportes/mapa")
+async def mapa():
+
+    return [
+        {
+            "lat":20.5888,
+            "lon":-100.3899,
+            "prioridad":"alta"
+        },
+        {
+            "lat":20.5930,
+            "lon":-100.3920,
+            "prioridad":"media"
+        }
+    ]
