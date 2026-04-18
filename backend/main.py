@@ -1,15 +1,14 @@
-from fastapi import FastAPI
 from pydantic import BaseModel
-
-app = FastAPI()
 
 class Reporte(BaseModel):
     tipo: str
     zona_tipo: str
 
+
 @app.get("/health")
 async def health():
-    return {"status":"ok"}
+    return {"status": "ok", "message": "Backend Aqua-Priority funcionando"}
+
 
 @app.post("/reportes")
 async def crear_reporte(data: Reporte):
@@ -21,6 +20,8 @@ async def crear_reporte(data: Reporte):
         "zona": data.zona_tipo,
         "prioridad": prioridad
     }
+
+
 @app.get("/reportes/mapa")
 async def mapa():
 
@@ -36,6 +37,8 @@ async def mapa():
             "prioridad":"media"
         }
     ]
+
+
 @app.get("/rutas")
 async def rutas():
 
@@ -48,6 +51,8 @@ async def rutas():
             ]
         }
     ]
+
+
 @app.post("/telegram")
 @app.post("/webhook/telegram")
 async def telegram():
