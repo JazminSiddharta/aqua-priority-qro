@@ -1,0 +1,243 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "zona": "Centro",
+                "zona_tipo": "hospital"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -100.398,
+                            20.585
+                        ],
+                        [
+                            -100.388,
+                            20.585
+                        ],
+                        [
+                            -100.388,
+                            20.595
+                        ],
+                        [
+                            -100.398,
+                            20.595
+                        ],
+                        [
+                            -100.398,
+                            20.585
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "zona": "Cimatario",
+                "zona_tipo": "escuela"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -100.405,
+                            20.565
+                        ],
+                        [
+                            -100.390,
+                            20.565
+                        ],
+                        [
+                            -100.390,
+                            20.580
+                        ],
+                        [
+                            -100.405,
+                            20.580
+                        ],
+                        [
+                            -100.405,
+                            20.565
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "zona": "Juriquilla",
+                "zona_tipo": "urbana"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -100.460,
+                            20.650
+                        ],
+                        [
+                            -100.440,
+                            20.650
+                        ],
+                        [
+                            -100.440,
+                            20.670
+                        ],
+                        [
+                            -100.460,
+                            20.670
+                        ],
+                        [
+                            -100.460,
+                            20.650
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "zona": "El Refugio",
+                "zona_tipo": "urbana"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -100.355,
+                            20.625
+                        ],
+                        [
+                            -100.335,
+                            20.625
+                        ],
+                        [
+                            -100.335,
+                            20.645
+                        ],
+                        [
+                            -100.355,
+                            20.645
+                        ],
+                        [
+                            -100.355,
+                            20.625
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "zona": "Constituyentes",
+                "zona_tipo": "hospital"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -100.400,
+                            20.595
+                        ],
+                        [
+                            -100.385,
+                            20.595
+                        ],
+                        [
+                            -100.385,
+                            20.610
+                        ],
+                        [
+                            -100.400,
+                            20.610
+                        ],
+                        [
+                            -100.400,
+                            20.595
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "zona": "Norte",
+                "zona_tipo": "escuela"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -100.410,
+                            20.610
+                        ],
+                        [
+                            -100.395,
+                            20.610
+                        ],
+                        [
+                            -100.395,
+                            20.625
+                        ],
+                        [
+                            -100.410,
+                            20.625
+                        ],
+                        [
+                            -100.410,
+                            20.610
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "zona": "La Gotera",
+                "zona_tipo": "rural"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -100.390,
+                            20.853
+                        ],
+                        [
+                            -100.363,
+                            20.853
+                        ],
+                        [
+                            -100.363,
+                            20.874
+                        ],
+                        [
+                            -100.390,
+                            20.874
+                        ],
+                        [
+                            -100.390,
+                            20.853
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

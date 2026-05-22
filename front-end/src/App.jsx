@@ -95,8 +95,8 @@ export default function App() {
                     style={{ cursor: 'pointer' }}
                   >
                     <td>
-                      <strong>{r.zona || 'Zona Central'}</strong><br />
-                      <small style={{ color: '#888' }}>{r.tipo}</small>
+                      <strong>{r.ubicacion_texto || r.zona || 'Zona Central'}</strong><br />
+                      <small style={{ color: '#888' }}>{r.zona ? `${r.zona} · ${r.tipo}` : r.tipo}</small>
                     </td>
                     <td>
                       <span className={`badge badge-${r.prioridad}`}>
